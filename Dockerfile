@@ -1,4 +1,4 @@
-FROM node:12.18.1-buster
+FROM node:12.19.0-buster
 
 RUN apt-get update && apt-get install -y \
     curl \
