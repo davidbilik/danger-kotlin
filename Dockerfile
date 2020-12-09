@@ -14,7 +14,7 @@ RUN npm install -g danger@10.2.1
 # caches this RUN command because it did not change. which makes it impossible to rebuild the image without 
 # pruning the cache. To be able to easily force this commant to rebuild, we add this artificial dummy property.
 # Everytime we want rebuild the image we need to change value of this property.
-ARG dummy_version=1
+ARG dummy_version=0
 RUN curl -s https://raw.githubusercontent.com/danger/kotlin/d06e9bc166b26a3847d6a17677950e2d23f9c252/scripts/install.sh?dummy=$dummy_version | bash && \
     rm -r /root/.gradle
 
